@@ -26,7 +26,7 @@ html {
     border-radius: 25px;
 }
 
-.info .info_text{
+.info .info_text {
     font-size: 30px;
     text-align: center;
 }
@@ -49,13 +49,34 @@ html {
     margin-top: 15px;
     height: 35px;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 .answer {
+    position: relative;
     margin-top: 15px;
     padding: 20px;
 }
 
+.answer p {
+    margin: 0;
+}
+
 .answer .answer_info li {
-    margin: 5px 0 5px 0;
+    margin-bottom: 5px;
+
+}
+
+.answer .answer_info {
+    margin-bottom: 0;
+}
+
+.edit {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.edit .edit_delete, .edit_info {
+    cursor: pointer;
+    border-radius: 25px;
 }
