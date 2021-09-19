@@ -19,7 +19,7 @@ html {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    width: 800px;
+    max-width: 800px;
     min-height: 100px;
     /* background-color: gray; */
     border: 3px solid #131ec5;
@@ -64,7 +64,6 @@ html {
 
 .answer .answer_info li {
     margin-bottom: 5px;
-
 }
 
 .answer .answer_info {
@@ -79,4 +78,10 @@ html {
 .edit .edit_delete, .edit_info {
     cursor: pointer;
     border-radius: 25px;
+}
+
+#editInput {
+    border-radius: 25px;
+    padding: 0 5px 0 5px;
+    outline: none;
 }

@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         list.innerHTML = '';
         arrNotes.forEach(item => {
+            console.log(item.length);
             list.innerHTML += `
             <li>${item}
             <div class='edit'>
@@ -57,7 +58,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 cancelBtn.addEventListener('click', () => {
                     render();
                 });
-
 
             });
         });
