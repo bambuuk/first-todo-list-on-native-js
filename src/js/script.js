@@ -33,9 +33,19 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.edit_info').forEach((item, i) => {
             item.addEventListener('click', (e) => {
                 e.target.parentElement.parentElement.innerHTML = `
-                <input required placeholder="Введите изменения" name="name" type="text" class="info_input"></input>
+                <input required placeholder="Введите изменения" name="name" type="text" id="editInput"></input>
+                <button id='editBtn' class='edit_info'>Редактировать</button>
                 `;
-                console.log(input.value);
+                const editBtn = document.querySelector('#editBtn');
+                let editInput = document.querySelector('#editInput');
+                editBtn.addEventListener('click', (e) => {
+                    if (editInput.value) {
+                        arrNotes.splice(i, 1, editInput.value);
+                        render();
+                        console.log(arrNotes);   
+                    }
+                     
+                });
             });
         });
     }
@@ -50,5 +60,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     btn.addEventListener('click', addInfo);
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            addInfo();
+        }
+    });
 
 });
